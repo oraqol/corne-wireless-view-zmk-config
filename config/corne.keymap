@@ -9,21 +9,232 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+rpi: require_prior_idle {
+    compatible = "zmk,behavior-hold-tap";
+    label = "REQUIRE_PRIOR_IDLE";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
+    bindings = <&kp>, <&kp>;
+};
+
+
+    };
+    combos {
+        compatible = "zmk,combos";
+        apple_key {
+            timeout-ms = <50>;
+            key-positions = <37 38>;
+            bindings = <&sk LGUI>;
+            require-prior-idle-ms = <125>;
+        };
+        l_paren {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp LPAR>;
+            require-prior-idle-ms = <125>;
+        };
+        r_paren {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp RPAR>;
+            require-prior-idle-ms = <125>;
+        };
+        l_brack {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp LBKT>;
+            require-prior-idle-ms = <125>;
+        };
+        r_brack {
+            timeout-ms = <50>;
+            key-positions = <9 10>;
+            bindings = <&kp RBKT>;
+            require-prior-idle-ms = <125>;
+        };
+        add {
+            timeout-ms = <100>;
+            key-positions = <18 19>;
+            bindings = <&kp PLUS>;
+            require-prior-idle-ms = <125>;
+        };
+        subtract {
+            timeout-ms = <100>;
+            key-positions = <19 20>;
+            bindings = <&kp MINUS>;
+            require-prior-idle-ms = <125>;
+        };
+        multi {
+            timeout-ms = <100>;
+            key-positions = <20 21>;
+            bindings = <&kp KP_MULTIPLY>;
+            require-prior-idle-ms = <125>;
+        };
+        tabs {
+            timeout-ms = <100>;
+            key-positions = <39 40>;
+            bindings = <&kp TAB>;
+            require-prior-idle-ms = <125>;
+        };
+        ents {
+            timeout-ms = <100>;
+            key-positions = <38 39>;
+            bindings = <&kp RET>;
+            require-prior-idle-ms = <125>;
+        };
+        bt1 {
+            timeout-ms = <100>;
+            key-positions = <1 6>;
+            bindings = <&bt BT_SEL 0>;
+            require-prior-idle-ms = <125>;
+        };
+        bt2 {
+            timeout-ms = <100>;
+            key-positions = <1 7>;
+            bindings = <&bt BT_SEL 1>;
+            require-prior-idle-ms = <125>;
+        };
+        bt3 {
+            timeout-ms = <100>;
+            key-positions = <1 8>;
+            bindings = <&bt BT_SEL 2>;
+            require-prior-idle-ms = <125>;
+        };
+        bt4 {
+            timeout-ms = <100>;
+            key-positions = <1 9>;
+            bindings = <&bt BT_SEL 3>;
+            require-prior-idle-ms = <125>;
+        };
+        bt5 {
+            timeout-ms = <100>;
+            key-positions = <1 10>;
+            bindings = <&bt BT_SEL 4>;
+            require-prior-idle-ms = <125>;
+        };
+        btclr {
+            timeout-ms = <100>;
+            key-positions = <1 18>;
+            bindings = <&bt BT_CLR>;
+            require-prior-idle-ms = <125>;
+        };
+        same {
+            timeout-ms = <100>;
+            key-positions = <21 22>;
+            bindings = <&kp EQUAL>;
+            require-prior-idle-ms = <125>;
+        };
+        escapades {
+            timeout-ms = <100>;
+            key-positions = <17 18>;
+            bindings = <&kp ESC>;
+            require-prior-idle-ms = <125>;
+        };
+        cut {
+            timeout-ms = <100>;
+            key-positions = <26 27>;
+            bindings = <&kp K_CUT>;
+            require-prior-idle-ms = <125>;
+        };
+        copy {
+            timeout-ms = <100>;
+            key-positions = <27 28>;
+            bindings = <&kp K_COPY>;
+            require-prior-idle-ms = <125>;
+        };
+        paste {
+            timeout-ms = <100>;
+            key-positions = <28 29>;
+            bindings = <&kp K_PASTE>;
+            require-prior-idle-ms = <125>;
+        };
+        undo {
+            timeout-ms = <100>;
+            key-positions = <28 29>;
+            bindings = <&kp K_UNDO>;
+            require-prior-idle-ms = <125>;
+        };
+        bang {
+            timeout-ms = <100>;
+            key-positions = <31 32>;
+            bindings = <&kp EXCL>;
+            require-prior-idle-ms = <125>;
+        };
+    };
+
+    macros {
+        sh_tb: sh_tb {
+            label = "sh_tb";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LSHFT>, <&macro_tap &kp TAB>;
+        };
+        alt_shift_tab: alt_shift_tab {
+            label = "alt_shift_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHFT>, <&macro_tap &kp TAB>, <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>;
+        };
+       ctrl_tab: ctrl_tab {
+            label = "ctrl_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp TAB>, <&macro_release &kp LCTRL>;
+        };
+        ctrl_shift_tab: ctrl_shift_tab {
+            label = "ctrl_shift_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LSHFT>, <&macro_tap &kp TAB>, <&macro_release &kp LCTRL>, <&macro_release &kp LSHFT>;
+        };
+       swipe_right: swipe_right {
+            label = "swipe_right";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp RIGHT>, <&macro_release &kp LGUI>;
+        };
+        swipe_left: swipe_left {
+            label = "swipe_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp LEFT>, <&macro_release &kp LGUI>;
+        };
+        speed_up: speed_up {
+            label = "speed_up";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LSHFT>, <&macro_press &kp UP>,  <&macro_release &kp LCTRL>, <&macro_release &kp LSHFT>, <&macro_release &kp UP>;
+        };
+        speed_dn: speed_dn {
+            label = "speed_dn";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LSHFT>, <&macro_press &kp DOWN>, <&macro_release &kp LCTRL>, <&macro_release &kp LSHFT>, <&macro_release &kp DOWN>;
+        };
+    };
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |  0  |  1  |  2  |  3  | 4   |  5  |        |   6  |   7  |   8  |   9  |  10  |  11  |
+// | 12  | 13  | 14  | 15  | 16  | 17  |        |  18  |  19  |  20  |  21  |  22  |  23  |
+// | 24  | 25  | 26  | 27  | 28  | 29  |        |  30  |  31  |  32  |  33  |  34  |  35  |
+//                |  36  | 37   |  38  |        |  39  |  40  |  41  |
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  F  |  P  |  G  |     |  J  |  L   |  U  |  Y  |  ;  | BKSP |
+// | CTRL |  A  |  R  |  S  |  T  |  D  |     |  H  |  N   |  E  |  I  |  O  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |     |  K  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |     | ENT | RSE  | ALT |
                         label = "Base";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+   &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt COLON SQT   &kp BSPC
+   &kp LCTRL &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt QMARK FSLH &kp ESC
+             &kp LCTRL &kp LSHFT &kp BSPC    &kp SPACE &mo 1 &kp LALT
                         >;
                 };
                 lower_layer {
@@ -34,10 +245,10 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "Lower";
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &kp TAB   &ctrl_shift_tab  &ctrl_tab &kp LSHIFT  &kp TAB &kp N5         &kp CARET  &kp C_VOL_UP  &kp C_VOL_DN  &speed_up  &speed_dn &kp BSPC
+   &kp LCTRL &kp N1           &kp N2    &kp N3          &kp N4   &kp AMPS       &kp PG_UP  &kp LEFT      &kp UP        &kp DOWN   &kp RIGHT &trans
+   &kp LSHFT &kp N5           &kp N6    &kp N7          &kp N8   &kp UNDER      &kp PG_DN  &kp HOME      &kp END       &kp AT     &kp HASH &trans
+                          	            &kp LGUI        &kp N9   &kp N0         &kp LCTRL  &to 0   &kp RALT
                         >;
                 };
 
@@ -49,9 +260,9 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "Raise";
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR &kp BSPC
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp MINUS   &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC         &kp RBRC  &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
