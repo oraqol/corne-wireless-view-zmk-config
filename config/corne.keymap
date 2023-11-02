@@ -181,6 +181,18 @@ rpi: require_prior_idle {
             bindings = <&colemak>;
             require-prior-idle-ms = <125>;
         };
+        sc_esc {
+            timeout-ms = <100>;
+            key-positions = <13 14 15 16>;
+            bindings = <&kp ESC>;
+            require-prior-idle-ms = <125>;
+        };
+        sc_tab {
+            timeout-ms = <100>;
+            key-positions = <25 26 27 28>;
+            bindings = <&kp ESC>;
+            require-prior-idle-ms = <125>;
+        };
     };
 
     macros {
