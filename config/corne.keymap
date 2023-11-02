@@ -178,41 +178,11 @@ rpi: require_prior_idle {
     };
 
     macros {
-        sh_tb: sh_tb {
-            label = "sh_tb";
+        sc_crtl: sc_crtl {
+            label = "sc_crtl";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LSHFT>, <&macro_tap &kp TAB>;
-        };
-        alt_shift_tab: alt_shift_tab {
-            label = "alt_shift_tab";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHFT>, <&macro_tap &kp TAB>, <&macro_release &kp LSHFT>, <&macro_release &kp LGUI>;
-        };
-       ctrl_tab: ctrl_tab {
-            label = "ctrl_tab";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp TAB>, <&macro_release &kp LCTRL>;
-        };
-        ctrl_shift_tab: ctrl_shift_tab {
-            label = "ctrl_shift_tab";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LSHFT>, <&macro_tap &kp TAB>, <&macro_release &kp LCTRL>, <&macro_release &kp LSHFT>;
-        };
-       swipe_right: swipe_right {
-            label = "swipe_right";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp RIGHT>, <&macro_release &kp LGUI>;
-        };
-        swipe_left: swipe_left {
-            label = "swipe_left";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp LEFT>, <&macro_release &kp LGUI>;
+            bindings = <&macro_press &mo 4>, <&macro_press &kp LCTRL>,  <&macro_release &kp LCTRL>, <&macro_release &mo 4>;
         };
         speed_up: speed_up {
             label = "speed_up";
@@ -287,9 +257,9 @@ rpi: require_prior_idle {
                         label = "Game_Layer";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp Q &kp Q &kp Q &kp Q &kp Q   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &mo 4   &kp RET &mo 2 &kp RALT
+                  &kp LGUI &mo 4 &kp F2   &kp RET &mo 2 &kp RALT
                         >;
                 };
                 game_layer_2 {
@@ -303,7 +273,7 @@ rpi: require_prior_idle {
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
    &kp LCTRL &kp A &kp A &kp A &kp A &kp A   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                  &kp LGUI &mo 1 &kp F2   &kp RET &mo 2 &kp RALT
                         >;
                 };
         };
