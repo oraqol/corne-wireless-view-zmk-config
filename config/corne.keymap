@@ -175,9 +175,21 @@ rpi: require_prior_idle {
             bindings = <&to 0>;
             require-prior-idle-ms = <125>;
         };
+        sw_col {
+            timeout-ms = <100>;
+            key-positions = <36 41>;
+            bindings = <&colemak>;
+            require-prior-idle-ms = <125>;
+        };
     };
 
     macros {
+        colemak: colemak {
+            label = "colemak";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_press &kp SPACE>,  <&macro_release &kp SPACE>, <&macro_release &kp LGUI>;
+        };
         ping: ping {
             label = "ping";
             compatible = "zmk,behavior-macro";
