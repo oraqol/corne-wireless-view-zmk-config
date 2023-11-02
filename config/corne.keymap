@@ -178,6 +178,12 @@ rpi: require_prior_idle {
     };
 
     macros {
+        ping: ping {
+            label = "ping";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_press &kp G>,  <&macro_release &kp G>, <&macro_release &kp LALT>;
+        };
         sc_crtl: sc_crtl {
             label = "sc_crtl";
             compatible = "zmk,behavior-macro";
@@ -259,7 +265,7 @@ rpi: require_prior_idle {
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 4 &kp F2   &kp RET &mo 2 &kp RALT
+                  &kp F2 &to 4 &kp LSHFT   &kp RET &mo 2 &kp RALT
                         >;
                 };
                 game_layer_2 {
@@ -270,10 +276,10 @@ rpi: require_prior_idle {
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         label = "Game_Layer_2";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
-   &kp LCTRL &kp N1 &kp N2 &kp N3 &kp N4 &kp A   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &sc_crtl   &kp RET &mo 2 &kp RALT
+   &kp TAB   &kp N5 &kp N6 &kp N7 &kp N8 &kp LALT   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
+   &kp LCTRL &kp N1 &kp N2 &kp N3 &kp N4 &ping   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp LSHFT &kp LCTRL   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp F2 &to 3 &kp LCTRL   &to 0  &mo 2 &kp RALT
                         >;
                 };
         };
