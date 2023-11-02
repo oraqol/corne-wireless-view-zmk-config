@@ -166,7 +166,7 @@ rpi: require_prior_idle {
         mv_gm1 {
             timeout-ms = <100>;
             key-positions = <13 22>;
-            bindings = <&to 3>;
+            bindings = <&to 4>;
             require-prior-idle-ms = <125>;
         };
         mv_base {
