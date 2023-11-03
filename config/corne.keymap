@@ -185,7 +185,7 @@ rpi: require_prior_idle {
         sc_esc {
             timeout-ms = <100>;
             key-positions = <13 14 15 16>;
-            bindings = <&kp ESC>;
+            bindings = <&mo 5>;
             require-prior-idle-ms = <125>;
         };
         sc_tab {
@@ -303,7 +303,7 @@ rpi: require_prior_idle {
                         bindings = <
    &kp TAB   &kp N5 &kp N6 &kp N7 &kp N8 &trans   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
    &kp LCTRL &kp N1 &kp N2 &kp N3 &kp N4 &ping   &kp H &mkp LCLK  &mkp RCLK     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp LCTRL &kp LALT   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+   &kp LSHFT &kp Z &kp X &kp C &kp LCTRL &kp LALT   &kp N &kp K_COPY  &kp K_PASTE &kp DOT &kp FSLH &kp ESC
                   &kp F2 &to 3 &kp LSHFT   &to 0  &mo 2 &kp RALT
                         >;
                 };
