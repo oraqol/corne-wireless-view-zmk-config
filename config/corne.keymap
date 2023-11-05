@@ -289,7 +289,7 @@ rpi: require_prior_idle {
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &ping Y &kp N1 &kp N2 &kp N3 &kp N4    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &trans &mkp LCLK  &mkp RCLK     &kp TAB   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &transhhhh &kp N1 &kp N2 &kp N3 &kp N4 &kp ESC
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp ESC
                   &kp LALT &kp LSHFT &kp LCTRL   &kp F2 &mo 2 &kp RALT
                         >;
                 };
