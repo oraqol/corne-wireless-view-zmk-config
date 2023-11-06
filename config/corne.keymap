@@ -191,7 +191,7 @@ rpi: require_prior_idle {
         sc_tab {
             timeout-ms = <100>;
             key-positions = <19 20 21>;
-            bindings = <&kp F2>;
+            bindings = <&kp ESC>;
             require-prior-idle-ms = <125>;
         };
     };
