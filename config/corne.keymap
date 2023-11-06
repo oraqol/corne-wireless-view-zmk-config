@@ -312,6 +312,6 @@ rpi: require_prior_idle {
    &kp LSHFT &kp Z &kp X &kp C &kp LCTRL &kp LALT   &mwh SCROLL_DOWN &kp K_COPY  &kp K_PASTE &kp K_CUT &kp FSLH &kp ESC
                   &kp F2 &to 3 &kp LSHFT   &sel_a  &kp K_UNDO &kp K_REDO
                         >;
-                }
+                };
         };
 };
