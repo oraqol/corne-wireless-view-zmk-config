@@ -203,7 +203,6 @@ rpi: require_prior_idle {
             #binding-cells = <0>;
             bindings = <&macro_press &kp LGUI>, <&macro_press &kp SPACE>,  <&macro_release &kp SPACE>, <&macro_release &kp LGUI>;
         };
-        };
         sel_a: sel_a {
             label = "sel_a";
             compatible = "zmk,behavior-macro";
