@@ -257,7 +257,7 @@ rpi: require_prior_idle {
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "Lower";
-                        bindings = <o
+                        bindings = <
    &kp TAB   &kp N1  &kp N2  &kp N3  &kp N4  &kp AMPS         &kp CARET  &kp C_VOL_UP  &kp C_VOL_DN  &speed_up  &speed_dn &kp BSPC
    &kp LCTRL &kp N5  &kp N6  &kp N7  &kp N8  &kp HASH       &kp PG_UP  &kp LEFT      &kp UP        &kp DOWN   &kp RIGHT &trans
    &kp LSHFT &kp A   &kp A   &kp N9  &kp N0  &kp UNDER      &kp PG_DN  &kp HOME      &kp END       &kp AT     &kp AT &trans
