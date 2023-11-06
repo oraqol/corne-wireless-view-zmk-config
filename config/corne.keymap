@@ -290,7 +290,7 @@ rpi: require_prior_idle {
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &ping &kp N1 &kp N2 &kp N3 &kp N4    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp K_SCROLL_UP &mkp LCLK  &mkp RCLK     &kp TAB   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp K_SCROLL_DOWN &kp N5 &kp N6 &kp N7 &kp N8 &kp ESC
-                  &kp LALT &kp LSHFT &kp LCTRL   &kp F2 &mo 2 &kp RALT
+                  &kp LALT &kp LSHFT &kp LCTRL   &kp F2 &kp LCTRL &kp RALT
                         >;
                 };
                 game_layer_2 {
