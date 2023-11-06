@@ -294,8 +294,8 @@ rpi: require_prior_idle {
                         label = "Game_Layer";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &ping &kp N1 &kp N2 &kp N3 &kp N4    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &mwh SCROLL_UP &mkp LCLK  &mkp RCLK     &kp TAB   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &mwh SCROLL_DOWN &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp ESC
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp A &mkp LCLK  &mkp RCLK     &kp TAB   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp A &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp ESC
                   &kp SPACE &kp LSHFT &kp LCTRL   &kp F2 &kp RCTRL &kp RALT
                         >;
                 };
