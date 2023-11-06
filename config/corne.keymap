@@ -257,7 +257,7 @@ rpi: require_prior_idle {
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "Lower";
-                        bindings = <
+                        bindings = <o
    &kp TAB   &kp N1  &kp N2  &kp N3  &kp N4  &kp AMPS         &kp CARET  &kp C_VOL_UP  &kp C_VOL_DN  &speed_up  &speed_dn &kp BSPC
    &kp LCTRL &kp N5  &kp N6  &kp N7  &kp N8  &kp HASH       &kp PG_UP  &kp LEFT      &kp UP        &kp DOWN   &kp RIGHT &trans
    &kp LSHFT &kp A   &kp A   &kp N9  &kp N0  &kp UNDER      &kp PG_DN  &kp HOME      &kp END       &kp AT     &kp AT &trans
@@ -288,9 +288,9 @@ rpi: require_prior_idle {
                         label = "Game_Layer";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &ping &kp N1 &kp N2 &kp N3 &kp N4    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp K_SCROLL_UP &mkp LCLK  &mkp RCLK     &kp TAB   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp K_SCROLL_DOWN &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp ESC
-                  &mo 2 &kp LSHFT &kp LCTRL   &kp F2 &kp LCTRL &kp RALT
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &mwh SCROLL_UP &mkp LCLK  &mkp RCLK     &kp TAB   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &mwh SCROLL_DOWN &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp ESC
+                  &kp SPACE &kp LSHFT &kp LCTRL   &kp F2 &kp RCTRL &kp RALT
                         >;
                 };
                 game_layer_2 {
@@ -303,7 +303,7 @@ rpi: require_prior_idle {
                         bindings = <
    &kp TAB   &kp N5 &kp N6 &kp N7 &kp N8 &trans   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
    &kp LCTRL &kp N1 &kp N2 &kp N3 &kp N4 &ping   &kp H &mkp LCLK  &mkp RCLK     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp LCTRL &kp LALT   &kp N &kp K_COPY  &kp K_PASTE &kp DOT &kp FSLH &kp ESC
+   &kp LSHFT &kp Z &kp X &kp C &kp LCTRL &kp LALT   &kp K_CUT &kp K_COPY  &kp K_PASTE &kp DOT &kp FSLH &kp ESC
                   &kp F2 &to 3 &kp LSHFT   &to 0  &mo 2 &kp RALT
                         >;
                 };
