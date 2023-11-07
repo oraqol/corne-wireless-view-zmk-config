@@ -215,6 +215,12 @@ rpi: require_prior_idle {
             #binding-cells = <0>;
             bindings = <&sk LCTRL>, <&kp BSPC>;
         };
+        p_pass: p_pass {
+            label = "p_pass";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&kp P>, <&kp s>, <&kp i>, <&kp a>, <&kp c>, <&kp t>, <&kp i>, <&kp v> , <&kp e>, <&kp 1>, <&kp QMARK>;
+        };
         ping: ping {
             label = "ping";
             compatible = "zmk,behavior-macro";
