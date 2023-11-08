@@ -194,6 +194,12 @@ rpi: require_prior_idle {
             bindings = <&kp ESC>;
             require-prior-idle-ms = <125>;
         };
+        mac_tab {
+            timeout-ms = <100>;
+            key-positions = <33 34>;
+            bindings = <&kp LGUI;
+            require-prior-idle-ms = <125>;
+        };
     };
 
     macros {
