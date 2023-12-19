@@ -147,35 +147,42 @@ rpi: require_prior_idle {
             key-positions = <26 27>;
             bindings = <&kp K_CUT>;
             require-prior-idle-ms = <125>;
-            layers = <1>;
         };
         copy {
             timeout-ms = <100>;
             key-positions = <27 28>;
             bindings = <&kp K_COPY>;
             require-prior-idle-ms = <125>;
-            layers = <1>;
         };
         paste {
             timeout-ms = <100>;
             key-positions = <28 29>;
             bindings = <&kp K_PASTE>;
             require-prior-idle-ms = <125>;
-            layers = <1>;
         };
         undo {
             timeout-ms = <100>;
             key-positions = <28 29>;
             bindings = <&kp K_UNDO>;
             require-prior-idle-ms = <125>;
-            layers = <1>;
         };
         bang {
             timeout-ms = <100>;
             key-positions = <31 32>;
             bindings = <&kp EXCL>;
             require-prior-idle-ms = <125>;
-            layers = <1>;
+        };
+        sw_right {
+            timeout-ms = <100>;
+            key-positions = <15 16>;
+            bindings = <&kp EXCL>;
+            require-prior-idle-ms = <125>;
+        };
+        sw_left {
+            timeout-ms = <100>;
+            key-positions = <14 15>;
+            bindings = <&kp EXCL>;
+            require-prior-idle-ms = <125>;
         };
         mv_gm1 {
             timeout-ms = <100>;
@@ -221,6 +228,18 @@ rpi: require_prior_idle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LCTRL>, <&kp A>;
+        };
+        sw_r: sw_r {
+            label = "sw_r";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp RIGHT>,  <&macro_release &kp LCTRL>, <&macro_release &kp LGUI>;
+        };
+        sw_l: sw_l {
+            label = "sw_l";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp LEFT>,  <&macro_release &kp LCTRL>, <&macro_release &kp LGUI>;
         };
         b_del: b_del {
             label = "b_del";
@@ -289,7 +308,7 @@ rpi: require_prior_idle {
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "Lower";
                         bindings = <
-   &kp TAB   &kp N1  &kp N2  &kp N3  &kp N4  &kp AMPS         &kp CARET  &kp C_VOL_UP  &kp C_VOL_DN  &kp PLUS  &kp MINUS &kp BSPC
+   &kp TAB   &kp N1  &kp N2  &kp N3  &kp N4  &kp AMPS         &kp CARET  &kp C_VOL_UP  &kp C_VOL_DN  &speed_up  &speed_dn &kp BSPC
    &kp LCTRL &kp N5  &kp N6  &kp N7  &kp N8  &kp HASH       &kp PG_UP  &kp LEFT      &kp UP        &kp DOWN   &kp RIGHT &trans
    &kp LSHFT &p_pass   &kp A   &kp N9  &kp N0  &kp UNDER      &kp PG_DN  &kp HOME      &kp END       &kp AT     &kp AT &trans
                           	            &kp LGUI        &kp N9   &kp N0         &kp LCTRL  &to 0   &kp RALT
