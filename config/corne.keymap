@@ -78,7 +78,7 @@ rpi: require_prior_idle {
             timeout-ms = <100>;
             key-positions = <20 21>;
             bindings = <&kp KP_MULTIPLY>;
-            require-prior-idle-ms = <125>i
+            require-prior-idle-ms = <125>;
             layers = <1>;
         };
         same {
