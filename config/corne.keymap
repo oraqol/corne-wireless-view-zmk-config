@@ -153,36 +153,42 @@ rpi: require_prior_idle {
             key-positions = <27 28>;
             bindings = <&kp K_COPY>;
             require-prior-idle-ms = <125>;
+            layers = <1>;
         };
         paste {
             timeout-ms = <100>;
             key-positions = <28 29>;
             bindings = <&kp K_PASTE>;
             require-prior-idle-ms = <125>;
+            layers = <1>;
         };
         undo {
             timeout-ms = <100>;
             key-positions = <28 29>;
             bindings = <&kp K_UNDO>;
             require-prior-idle-ms = <125>;
+            layers = <1>;
         };
         bang {
             timeout-ms = <100>;
             key-positions = <31 32>;
             bindings = <&kp EXCL>;
             require-prior-idle-ms = <125>;
+            layers = <1>;
         };
         sw_right {
             timeout-ms = <100>;
             key-positions = <15 16>;
-            bindings = <&kp EXCL>;
+            bindings = <&sw_r>;
             require-prior-idle-ms = <125>;
+            layers = <1>;
         };
         sw_left {
             timeout-ms = <100>;
             key-positions = <14 15>;
-            bindings = <&kp EXCL>;
+            bindings = <&sw_l>;
             require-prior-idle-ms = <125>;
+            layers = <1>;
         };
         mv_gm1 {
             timeout-ms = <100>;
