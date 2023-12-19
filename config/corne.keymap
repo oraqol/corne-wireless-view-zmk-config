@@ -277,7 +277,7 @@ rpi: require_prior_idle {
             label = "b_del";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LCTRL>, <&kp BSPC>;
+            bindings = <&kp LCTRL>, <&kp BSPC>;
         };
         p_pass: p_pass {
             label = "p_pass";
