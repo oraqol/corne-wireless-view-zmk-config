@@ -265,13 +265,13 @@ rpi: require_prior_idle {
             label = "pan_r";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>,, <&macro_tap &kp RIGHT>, <&macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LALT>;
         };
         pan_l: pan_l {
             label = "pan_l";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>,, <&macro_tap &kp LEFT>, <&macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp LEFT>, <&macro_release &kp LALT>;
         };
         b_del: b_del {
             label = "b_del";
