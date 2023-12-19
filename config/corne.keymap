@@ -193,14 +193,14 @@ rpi: require_prior_idle {
         pan_right {
             timeout-ms = <100>;
             key-positions = <15 16>;
-            bindings = <&sw_r>;
+            bindings = <&pan_r>;
             require-prior-idle-ms = <125>;
             layers = <1>;
         };
         pan_left {
             timeout-ms = <100>;
             key-positions = <14 15>;
-            bindings = <&sw_l>;
+            bindings = <&pan_l>;
             require-prior-idle-ms = <125>;
             layers = <1>;
         };
