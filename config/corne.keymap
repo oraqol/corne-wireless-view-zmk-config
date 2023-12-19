@@ -239,13 +239,13 @@ rpi: require_prior_idle {
             label = "sw_r";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, <&macro_press &kp LCTRL>, <&macro_tap &kp RIGHT>,  <&macro_release &kp LCTRL>, <&macro_release &kp LALT>;
+            bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp RIGHT>,  <&macro_release &kp LCTRL>, <&macro_release &kp LGUI>;
         };
         sw_l: sw_l {
             label = "sw_l";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, <&macro_press &kp LCTRL>, <&macro_tap &kp LEFT>,  <&macro_release &kp LCTRL>, <&macro_release &kp LALT>;
+            bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp LEFT>,  <&macro_release &kp LCTRL>, <&macro_release &kp LGUI>;
         };
         b_del: b_del {
             label = "b_del";
