@@ -277,7 +277,7 @@ rpi: require_prior_idle {
             label = "w_delete";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk RCTRL>, <&kp BSPC>;
+            bindings = <&kp RCTRL &kp BSPC>;
         };
         p_pass: p_pass {
             label = "p_pass";
@@ -329,7 +329,7 @@ rpi: require_prior_idle {
    &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt COLON SQT   &kp BSPC
    &kp LCTRL &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &mt PIPE COMMA &mt BSLH DOT &mt QMARK FSLH &kp ESC
-             &mo 4 &kp LSHFT &mt &w_delete BSPC    &kp SPACE &mo 1 &kp LCTRL
+             &kp LALT &kp LSHFT &mt &w_delete BSPC    &kp SPACE &mo 1 &kp LCTRL
                         >;
                 };
                 lower_layer {
