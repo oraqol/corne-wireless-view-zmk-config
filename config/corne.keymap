@@ -178,12 +178,26 @@ rpi: require_prior_idle {
         };
         sw_right {
             timeout-ms = <100>;
-            key-positions = <15 16>;
+            key-positions = <27 28>;
             bindings = <&sw_r>;
             require-prior-idle-ms = <125>;
             layers = <1>;
         };
         sw_left {
+            timeout-ms = <100>;
+            key-positions = <26 27>;
+            bindings = <&sw_l>;
+            require-prior-idle-ms = <125>;
+            layers = <1>;
+        };
+        pan_right {
+            timeout-ms = <100>;
+            key-positions = <15 16>;
+            bindings = <&sw_r>;
+            require-prior-idle-ms = <125>;
+            layers = <1>;
+        };
+        pan_left {
             timeout-ms = <100>;
             key-positions = <14 15>;
             bindings = <&sw_l>;
@@ -246,6 +260,18 @@ rpi: require_prior_idle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp LEFT>,  <&macro_release &kp LCTRL>, <&macro_release &kp LGUI>;
+        };
+        pan_r: pan_r {
+            label = "pan_r";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>,, <&macro_tap &kp RIGHT>, <&macro_release &kp LALT>;
+        };
+        pan_l: pan_l {
+            label = "pan_l";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>,, <&macro_tap &kp LEFT>, <&macro_release &kp LALT>;
         };
         b_del: b_del {
             label = "b_del";
