@@ -265,13 +265,13 @@ rpi: require_prior_idle {
             label = "pan_r";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>;
         };
         pan_l: pan_l {
             label = "pan_l";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp LEFT>, <&macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp TAB>, <&macro_press &kp LSHFT>, <&macro_release &kp LALT>;
         };
         b_del: b_del {
             label = "b_del";
@@ -290,7 +290,7 @@ rpi: require_prior_idle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LALT>, <&macro_press &kp G>,  <&macro_release &kp G>, <&macro_release &kp LALT>;
-        };
+        };L
         sc_crtl: sc_crtl {
             label = "sc_crtl";
             compatible = "zmk,behavior-macro";
