@@ -36,43 +36,57 @@ rpi: require_prior_idle {
             timeout-ms = <50>;
             key-positions = <6 7>;
             bindings = <&kp LPAR>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <125>
+            layers = <1>;
         };
         r_paren {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&kp RPAR>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <125>
+            layers = <1>;
         };
         l_brack {
             timeout-ms = <50>;
             key-positions = <8 9>;
             bindings = <&kp LBKT>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <125>
+            layers = <1>;
         };
         r_brack {
             timeout-ms = <50>;
             key-positions = <9 10>;
             bindings = <&kp RBKT>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <125>
+            layers = <1>;
         };
         add {
             timeout-ms = <100>;
             key-positions = <18 19>;
             bindings = <&kp PLUS>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <125>
+            layers = <1>;
         };
         subtract {
             timeout-ms = <100>;
             key-positions = <19 20>;
             bindings = <&kp MINUS>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <125>
+            layers = <1>;
         };
         multi {
             timeout-ms = <100>;
             key-positions = <20 21>;
             bindings = <&kp KP_MULTIPLY>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <125>
+            layers = <1>;
+        };
+        same {
+            timeout-ms = <100>;
+            key-positions = <21 22>;
+            bindings = <&kp EQUAL>;
+            require-prior-idle-ms = <125>
+            layers = <1>;
         };
         tabs {
             timeout-ms = <100>;
@@ -120,12 +134,6 @@ rpi: require_prior_idle {
             timeout-ms = <100>;
             key-positions = <1 18>;
             bindings = <&bt BT_CLR>;
-            require-prior-idle-ms = <125>;
-        };
-        same {
-            timeout-ms = <100>;
-            key-positions = <21 22>;
-            bindings = <&kp EQUAL>;
             require-prior-idle-ms = <125>;
         };
         escapades {
