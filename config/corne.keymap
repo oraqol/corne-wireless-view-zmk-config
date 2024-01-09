@@ -124,12 +124,12 @@ rpi: require_prior_idle {
             bindings = <&bt BT_SEL 3>;
             require-prior-idle-ms = <125>;
         };
-        bt5 {
-            timeout-ms = <100>;
-            key-positions = <1 10>;
-            bindings = <&bt BT_SEL 4>;
-            require-prior-idle-ms = <125>;
-        };
+//        bt5 {
+//            timeout-ms = <100>;
+//            key-positions = <1 10>;
+//            bindings = <&bt BT_SEL 4>;
+//            require-prior-idle-ms = <125>;
+//        };
         btclr {
             timeout-ms = <100>;
             key-positions = <1 18>;
