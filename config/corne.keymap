@@ -228,15 +228,15 @@ rpi: require_prior_idle {
             bindings = <&mo 5>;
             require-prior-idle-ms = <125>;
         };
-        sc_tab {
+//        sc_tab {
+//            timeout-ms = <100>;
+//            key-positions = <19 20 21>;
+//            bindings = <&kp ESC>;
+//            require-prior-idle-ms = <125>;
+//        };
+        apple_key {
             timeout-ms = <100>;
             key-positions = <19 20 21>;
-            bindings = <&kp ESC>;
-            require-prior-idle-ms = <125>;
-        };
-        apple_key {
-            timeout-ms = <50>;
-            key-positions = <19 20 21 22>;
             bindings = <&sk LGUI>;
             require-prior-idle-ms = <125>;
         };
