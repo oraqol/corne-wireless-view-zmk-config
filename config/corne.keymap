@@ -26,12 +26,6 @@ rpi: require_prior_idle {
     };
     combos {
         compatible = "zmk,combos";
-        apple_key {
-            timeout-ms = <50>;
-            key-positions = <37 38>;
-            bindings = <&sk LGUI>;
-            require-prior-idle-ms = <125>;
-        };
         l_paren {
             timeout-ms = <50>;
             key-positions = <6 7>;
@@ -238,6 +232,12 @@ rpi: require_prior_idle {
             timeout-ms = <100>;
             key-positions = <19 20 21>;
             bindings = <&kp ESC>;
+            require-prior-idle-ms = <125>;
+        };
+        apple_key {
+            timeout-ms = <50>;
+            key-positions = <19 20 21 22>;
+            bindings = <&sk LGUI>;
             require-prior-idle-ms = <125>;
         };
     };
