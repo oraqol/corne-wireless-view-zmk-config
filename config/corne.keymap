@@ -389,5 +389,38 @@ rpi: require_prior_idle {
                   &kp F2 &to 3 &kp LSHFT   &sel_a  &kp K_UNDO &kp K_REDO
                         >;
                 };
+                maclayer1 {
+// -----------------------------------------------------------------------------------------
+// |  0  |  1  |  2  |  3  | 4   |  5  |        |   6  |   7  |   8  |   9  |  10  |  11  |
+// | 12  | 13  | 14  | 15  | 16  | 17  |        |  18  |  19  |  20  |  21  |  22  |  23  |
+// | 24  | 25  | 26  | 27  | 28  | 29  |        |  30  |  31  |  32  |  33  |  34  |  35  |
+//                |  36  | 37   |  38  |        |  39  |  40  |  41  |
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  F  |  P  |  G  |     |  J  |  L   |  U  |  Y  |  ;  | BKSP |
+// | CTRL |  A  |  R  |  S  |  T  |  D  |     |  H  |  N   |  E  |  I  |  O  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |     |  K  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |     | ENT | RSE  | ALT |
+                        label = "maclayerone";
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt COLON SQT   &kp BSPC
+   &kp LCTRL &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &mt PIPE COMMA &mt BSLH DOT &mt QMARK FSLH &kp ESC
+             &kp LALT &kp LSHFT &kp BSPC    &kp SPACE &mo 1 &kp LGUI
+                        >;
+                };
+                maclayer2 {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        label = "maclayertwo";
+                        bindings = <
+   &kp TAB   &kp N1  &kp N2  &kp N3  &kp N4  &kp AMPS         &kp CARET  &kp C_VOL_UP  &kp C_VOL_DN  &kp PLUS  &kp MINUS &kp BSPC
+   &kp LCTRL &kp N5  &kp N6  &kp N7  &kp N8  &kp HASH       &kp PG_UP  &kp LEFT      &kp UP        &kp DOWN   &kp RIGHT &trans
+   &kp LSHFT &p_pass   &kp A   &kp N9  &kp N0  &kp UNDER      &kp PG_DN  &kp HOME      &kp END       &kp AT     &kp AT &trans
+                          	            &kp LGUI        &kp N9   &kp N0         &kp LCTRL  &to 0   &kp RALT
+                        >;
+                };
         };
 };
