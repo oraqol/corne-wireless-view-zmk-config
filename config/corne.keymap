@@ -216,6 +216,12 @@ rpi: require_prior_idle {
             bindings = <&to 0>;
             require-prior-idle-ms = <125>;
         };
+        mv_maclayer {
+            timeout-ms = <100>;
+            key-positions = <1 10>;
+            bindings = <&to 5>;
+            require-prior-idle-ms = <125>;
+        };    
         sw_col {
             timeout-ms = <100>;
             key-positions = <36 41>;
