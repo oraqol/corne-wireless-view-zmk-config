@@ -252,6 +252,12 @@ rpi: require_prior_idle {
             bindings = <&sk LSHFT>;
             require-prior-idle-ms = <125>;
         };
+        ctrler {
+            timeout-ms = <100>;
+            key-positions = <40 41>;
+            bindings = <&sk LCTRL>;
+            require-prior-idle-ms = <125>;
+        };
     };
 
     macros {
