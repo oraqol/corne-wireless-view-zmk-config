@@ -175,7 +175,6 @@ rpi: require_prior_idle {
             key-positions = <37 38>;
             bindings = <&kp TILDE>;
             require-prior-idle-ms = <125>;
-            layers = <1>;
         };
         sw_right {
             timeout-ms = <100>;
@@ -353,7 +352,7 @@ rpi: require_prior_idle {
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "Lower";
                         bindings = <
-   &kp TAB   &kp N1  &kp N2  &kp N3  &kp N4  &kp AMPS         &kp CARET  &kp C_VOL_UP  &kp C_VOL_DN  &kp PLUS  &kp MINUS &kp BSPC
+   &kp TAB   &kp N1  &kp N2  &kp N3  &kp N4  &kp AMPS         &kp CARET  &kp C_VOL_UP  &kp C_VOL_DN  &kp PLUS  &kp TILDE &kp BSPC
    &kp LCTRL &kp N5  &kp N6  &kp N7  &kp N8  &kp HASH       &kp PG_UP  &kp LEFT      &kp UP        &kp DOWN   &kp RIGHT &trans
    &kp LSHFT &kp LT   &kp GT   &kp N9  &kp N0  &kp UNDER      &kp PG_DN  &kp HOME      &kp END       &kp AT     &kp PIPE &trans
                           	            &kp LGUI        &kp LALT   &kp BSPC         &kp LCTRL  &kp LSHFT   &kp RALT
