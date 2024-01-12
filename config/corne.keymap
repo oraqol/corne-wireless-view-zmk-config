@@ -73,6 +73,12 @@ rpi: require_prior_idle {
             bindings = <&sk LCTRL>;
             require-prior-idle-ms = <125>;
         };
+        alter {
+            timeout-ms = <100>;
+            key-positions = <20 22>;
+            bindings = <&sk LALT>;
+            require-prior-idle-ms = <125>;
+        };
         same {
             timeout-ms = <100>;
             key-positions = <21 22>;
