@@ -63,19 +63,19 @@ rpi: require_prior_idle {
 //        };
         apple_key {
             timeout-ms = <100>;
-            key-positions = <19 20>;
+            key-positions = <19 20 21 22>;
             bindings = <&kp LGUI>;
             require-prior-idle-ms = <125>;
         };
         ctrler {
             timeout-ms = <100>;
-            key-positions = <20 21>;
+            key-positions = <20 21 22>;
             bindings = <&sk LCTRL>;
             require-prior-idle-ms = <125>;
         };
         alter {
             timeout-ms = <100>;
-            key-positions = <19 21>;
+            key-positions = <19 20 i21>;
             bindings = <&sk LALT>;
             require-prior-idle-ms = <125>;
         };
