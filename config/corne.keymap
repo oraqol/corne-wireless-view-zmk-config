@@ -75,7 +75,7 @@ rpi: require_prior_idle {
         };
         alter {
             timeout-ms = <100>;
-            key-positions = <20 22>;
+            key-positions = <19 21>;
             bindings = <&sk LALT>;
             require-prior-idle-ms = <125>;
         };
