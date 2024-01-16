@@ -317,13 +317,13 @@ rpi: require_prior_idle {
             label = "speed_up";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LSHFT>, <&macro_press &kp UP>,  <&macro_release &kp LCTRL>, <&macro_release &kp LSHFT>, <&macro_release &kp UP>;
+            bindings = <&macro_press &kp LALT>, <&macro_press &kp LSHFT>, <&macro_press &kp UP>,  <&macro_release &kp LALT>, <&macro_release &kp LSHFT>, <&macro_release &kp UP>;
         };
         speed_dn: speed_dn {
             label = "speed_dn";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LSHFT>, <&macro_press &kp DOWN>, <&macro_release &kp LCTRL>, <&macro_release &kp LSHFT>, <&macro_release &kp DOWN>;
+            bindings = <&macro_press &kp LALT>, <&macro_press &kp LSHFT>, <&macro_press &kp DOWN>, <&macro_release &kp LALT>, <&macro_release &kp LSHFT>, <&macro_release &kp DOWN>;
         };
     };
         keymap {
@@ -356,7 +356,7 @@ rpi: require_prior_idle {
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "Lower";
                         bindings = <
-   &trans &kp FSLH  &kp BSLH  &kp COLON &kp SEMI  &kp PIPE       &kp PG_UP  &kp HOME  &kp END  &kp C_VOL_UP   &kp C_VOL_DN &trans
+   &trans &kp FSLH  &kp BSLH  &kp COLON &kp SEMI  &kp PIPE       &kp PG_UP  &kp speed_up  &kp speed_dn  &kp C_VOL_UP   &kp C_VOL_DN &trans
    &trans &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  &kp QMARK      &kp PG_DN  &kp LEFT      &kp UP        &kp DOWN   &kp RIGHT &trans
    &trans &kp LT    &kp GT    &kp EXCL  &kp HASH  &kp UNDER      &kp EQUAL  &kp HOME      &kp END       &kp AT     &kp AMPS &trans
                      &kp LGUI   &kp LALT  &kp BSPC       &kp LCTRL     &kp LSHFT  &kp RALT
