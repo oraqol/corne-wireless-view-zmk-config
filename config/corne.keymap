@@ -441,3 +441,4 @@ rpi: require_prior_idle {
                   &kp F2 &to 3 &kp LSHFT   &sel_a  &kp K_UNDO &kp K_REDO
                         >;
                 };
+        };
