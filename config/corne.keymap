@@ -214,6 +214,12 @@ rpi: require_prior_idle {
             bindings = <&to 3>;
             require-prior-idle-ms = <125>;
         };
+        mv_nav {
+            timeout-ms = <100>;
+            key-positions = <13 14 15 16>;
+            bindings = <&mo 5>;
+            require-prior-idle-ms = <125>;
+        };
         mv_base {
             timeout-ms = <100>;
             key-positions = <25 34>;
@@ -439,6 +445,26 @@ rpi: require_prior_idle {
    &kp LCTRL &kp N1 &kp N2 &kp LSHFT &kp LCTRL &ping   &mwh SCROLL_UP &mkp LCLK  &mkp RCLK     &mkp MCLK   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp LCTRL &kp LALT   &mwh SCROLL_DOWN &kp K_COPY  &kp K_PASTE &kp K_CUT &kp FSLH &kp ESC
                   &kp F2 &to 3 &kp LSHFT   &sel_a  &kp K_UNDO &kp K_REDO
+                        >;
+                };
+                nav_layer {
+// -----------------------------------------------------------------------------------------
+// |  0  |  1  |  2  |  3  | 4   |  5  |        |   6  |   7  |   8  |   9  |  10  |  11  |
+// | 12  | 13  | 14  | 15  | 16  | 17  |        |  18  |  19  |  20  |  21  |  22  |  23  |
+// | 24  | 25  | 26  | 27  | 28  | 29  |        |  30  |  31  |  32  |  33  |  34  |  35  |
+//                |  36  | 37   |  38  |        |  39  |  40  |  41  |
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        label = "Nav_Layer";
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &ping &lt_corner &rt_corner &kp N3 &kp N4    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp A &lb_corner   &rb_corner     &lefty   &righty &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp A &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp ESC
+                  &kp SPACE &kp LSHFT &kp LCTRL   &kp F2 &kp RCTRL &kp RALT
                         >;
                 };
         };
