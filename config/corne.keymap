@@ -312,7 +312,7 @@ rpi: require_prior_idle {
             label = "\_pass";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&kp T>, <&kp E>, <&kp S>, <&kp T>, <&kp QMARK>, <&kp RET>;
+            bindings = <&sk LSHFT>, <&kp W>, <&kp H>, <&kp A>, <&kp T>, <&kp C>, <&kp O>, <&kp U>, <&kp L>, <&kp D>, <&kp G>, <&kp O>, <&kp W>, <&kp R>, <&kp O>, <&kp N>, <&kp G>, <&kp N7>, <&kp QMARK>, <&kp RET>;
         };
         ping: ping {
             label = "ping";
@@ -407,8 +407,8 @@ rpi: require_prior_idle {
                         bindings = <
    &trans &kp FSLH  &kp BSLH  &kp COLON &kp SEMI  &kp PIPE       &kp PG_UP  &kp PLUS  &kp MINUS  &kp C_VOL_UP   &kp C_VOL_DN &trans
    &trans &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  &kp QMARK      &kp PG_DN  &kp LEFT      &kp UP        &kp DOWN   &kp RIGHT &trans
-   &trans &kp LT    &kp GT    &kp EXCL  &kp HASH  &kp UNDER      &kp EQUAL  &kp HOME      &kp END       &kp AT     &kp AMPS &trans
-                     &kp LGUI   &kp LALT  &kp BSPC       &kp LCTRL     &kp LSHFT  &kp RALT
+   &trans &kp LT    &kp GT    &kp EXCL  &kp HASH  &kp UNDER      &kp EQUAL  &kp HOME      &kp END       &kp K_NEXT     &kp K_PREV &trans
+                     &kp LGUI   &kp LALT  &kp BSPC       &kp LCTRL     &kp K_PLAY_PAUSE  &kp RALT
                         >;
                 };
 
@@ -422,7 +422,7 @@ rpi: require_prior_idle {
                         bindings = <
    &trans &kp DLLR    &trans     &kp RBRC    &kp RBRC     &kp PRCNT           &kp CARET &kp N1 &kp N2 &kp N3 &kp PLUS  &trans
    &trans &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &p_pass        &kp UNDER &kp N4 &kp N5 &kp N6 &kp MINUS &trans
-   &trans &trans  &trans  &kp DEL  &kp LSHFT  &w_pass                       &kp KP_MULTIPLY &kp N7 &kp N8 &kp N9 &kp N0    &trans
+   &trans &kp AT  &kp AMPS  &kp DEL  &kp LSHFT  &w_pass                       &kp KP_MULTIPLY &kp N7 &kp N8 &kp N9 &kp N0    &trans
                     	     &kp LGUI &trans   &kp BSPC                 &kp UNDER   &kp MINUS    &kp RALT
                         >;
                 };
