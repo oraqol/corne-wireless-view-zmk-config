@@ -307,6 +307,12 @@ rpi: require_prior_idle {
             #binding-cells = <0>;
             bindings = <&sk LSHFT>, <&kp P>, <&kp S>, <&kp I>, <&kp A>, <&kp C>, <&kp T>, <&kp I>, <&kp V> , <&kp E>, <&kp 1>, <&kp QMARK>, <&kp RET>;
         };
+        w_pass: w_pass {
+            label = "\_pass";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&kp T>, <&kp E>, <&kp S>, <&kp T>, <&kp QMARK>, <&kp RET>;
+        };
         ping: ping {
             label = "ping";
             compatible = "zmk,behavior-macro";
@@ -415,7 +421,7 @@ rpi: require_prior_idle {
                         bindings = <
    &trans &kp DLLR    &trans     &kp RBRC    &kp RBRC     &kp PRCNT           &kp CARET &kp N1 &kp N2 &kp N3 &kp PLUS  &trans
    &trans &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &p_pass        &kp UNDER &kp N4 &kp N5 &kp N6 &kp MINUS &trans
-   &trans &trans  &trans  &kp DEL  &kp LSHFT  &trans                        &kp KP_MULTIPLY &kp N7 &kp N8 &kp N9 &kp N0    &trans
+   &trans &trans  &trans  &kp DEL  &kp LSHFT  &w_pass                       &kp KP_MULTIPLY &kp N7 &kp N8 &kp N9 &kp N0    &trans
                     	     &kp LGUI &trans   &kp BSPC                 &kp UNDER   &kp MINUS    &kp RALT
                         >;
                 };
