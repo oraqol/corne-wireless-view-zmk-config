@@ -397,9 +397,9 @@ rpi: require_prior_idle {
 //                    | GUI | LWR | SPC |     | ENT | RSE  | ALT |
                         label = "Base";
                         bindings = <
-   &kp PIPE &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt DQT SQT    &mt COLON HASH
-   &kp PLUS &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O          &kp EXCL
-   &kp MINUS &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt QMARK FSLH &kp UNDER
+   &kp BSLH PIPE &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt DQT SQT    &mt COLOeN HASH
+   &mt LT PLUS &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O          &kp EonXCL AT
+   &mt GT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt QMARK FSLH &kp UNDER
              &kp LCTRL &mo 2  &kp BSPC    &kp SPACE &mo 1 &kp LGUI
                         >;
                 };
@@ -471,7 +471,7 @@ rpi: require_prior_idle {
    &trans   &trans &kp N1 &kp N2 &kp N3 &trans   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
    &trans &kp L &kp T &kp ESC &kp N3 &kp O   &kp K_SCROLL_UP &mkp LCLK  &mkp RCLK     &mkp MCLK   &kp SEMI &kp SQT
    &trans &trans &kp HOME &kp V &kp B &kp LALT   &kp K_SCROLL_DOWN &kp K_COPY  &kp K_PASTE &kp K_CUT &kp FSLH &kp ESC
-                  &trans &trans &kp SPACE   &sel_a  &kp K_UNDO &kp K_REDO
+                  &trans &trans &kp SPACE   &to 0  &kp K_UNDO &kp K_REDO
                         >;
                 };
                 nav_layer {
