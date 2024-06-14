@@ -173,14 +173,12 @@ rpi: require_prior_idle {
             key-positions = <31 32>;
             bindings = <&browser_back>;
             require-prior-idle-ms = <125>;
-            layers = <1>;
         };
         forwarder {
             timeout-ms = <100>;
             key-positions = <33 34>;
             bindings = <&browser_for>;
             require-prior-idle-ms = <125>;
-            layers = <1>;
         };
         tilder {
             timeout-ms = <100>;
