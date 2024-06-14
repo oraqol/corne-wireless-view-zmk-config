@@ -389,13 +389,13 @@ rpi: require_prior_idle {
             label = "browser_back";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_press &kp LEFT>, <&macro_release &kp LEFT>, <&macro_release &kp RALT>;
+            bindings = <&macro_press &kp LALT>, <&macro_press &kp LEFT>, <&macro_release &kp LEFT>, <&macro_release &kp LALT>;
         };
         browser_for: browser_for {
             label = "browser_for";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_press &kp RIGHT>, <&macro_release &kp RIGHT>, <&macro_release &kp RALT>;
+            bindings = <&macro_press &kp LALT>, <&macro_press &kp RIGHT>, <&macro_release &kp RIGHT>, <&macro_release &kp LALT>;
         };
     };
         keymap {
