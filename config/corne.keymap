@@ -469,10 +469,10 @@ rpi: require_prior_idle {
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         label = "Frost_Punk";
                         bindings = <
-   &trans   &trans &trans &trans &trans &trans   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
+   &trans   &trans &kp N1 &kp N2 &kp N3 &trans   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
    &trans &kp L &kp T &kp ESC &kp N3 &kp O   &kp K_SCROLL_UP &mkp LCLK  &mkp RCLK     &mkp MCLK   &kp SEMI &kp SQT
    &trans &trans &kp HOME &kp V &kp B &kp LALT   &kp K_SCROLL_DOWN &kp K_COPY  &kp K_PASTE &kp K_CUT &kp FSLH &kp ESC
-                  &trans &to 0 &kp SPACE   &sel_a  &kp K_UNDO &kp K_REDO
+                  &trans &trans &kp SPACE   &sel_a  &kp K_UNDO &kp K_REDO
                         >;
                 };
                 nav_layer {
