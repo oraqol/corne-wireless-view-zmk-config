@@ -168,10 +168,17 @@ rpi: require_prior_idle {
 //            require-prior-idle-ms = <125>;
 //            layers = <1>;
 //        };
-        bang {
+        backer {
             timeout-ms = <100>;
             key-positions = <31 32>;
-            bindings = <&kp EXCL>;
+            bindings = <&browser_back>;
+            require-prior-idle-ms = <125>;
+            layers = <1>;
+        };
+        forwarder {
+            timeout-ms = <100>;
+            key-positions = <33 34>;
+            bindings = <&browser_for>;
             require-prior-idle-ms = <125>;
             layers = <1>;
         };
@@ -379,6 +386,18 @@ rpi: require_prior_idle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LALT>, <&macro_press &kp LCTRL>, <&macro_press &kp RIGHT>, <&macro_release &kp LALT>, <&macro_release &kp LCTRL>, <&macro_release &kp RIGHT>;
+        };
+        browser_back: browser_back {
+            label = "browser_back";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_press &kp LEFT>, <&macro_release &kp LEFT>, <&macro_release &kp LALT> ;
+        };
+        browser_for: browser_for {
+            label = "browser_for";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_press &kp RIGHT>, <&macro_release &kp RIGHT>, <&macro_release &kp LALT>;
         };
     };
         keymap {
