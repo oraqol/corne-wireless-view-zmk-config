@@ -392,9 +392,9 @@ rpi: require_prior_idle {
 //                    | GUI | LWR | SPC |     | ENT | RSE  | ALT |
                         label = "Base";
                         bindings = <
-   &trans &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt DQT SQT    &trans
-   &trans &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O          &trans
-   &trans &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt QMARK FSLH &trans
+   &kp PIPE &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt DQT SQT    &kp HASH
+   &kp COLON &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O          &kp EXCL
+   &kp MINUS &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt QMARK FSLH &kp UNDER
              &kp LCTRL &mo 2  &kp BSPC    &kp SPACE &mo 1 &kp LGUI
                         >;
                 };
