@@ -80,6 +80,24 @@ rpi: require_prior_idle {
             bindings = <&sk LALT>;
             require-prior-idle-ms = <125>;
         };
+        lapple_key {
+            timeout-ms = <100>;
+            key-positions = <13 14 15 16>;
+            bindings = <&kp LGUI>;
+            require-prior-idle-ms = <125>;
+        };
+        lctrler {
+            timeout-ms = <100>;
+            key-positions = <13 14 15>;
+            bindings = <&sk LCTRL>;
+            require-prior-idle-ms = <125>;
+        };
+        lalter {
+            timeout-ms = <100>;
+            key-positions = <14 15 16>;
+            bindings = <&sk LALT>;
+            require-prior-idle-ms = <125>;
+        };
         tabs {
             timeout-ms = <100>;
             key-positions = <39 40>;
