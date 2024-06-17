@@ -422,8 +422,8 @@ rpi: require_prior_idle {
                         bindings = <
    &mt BSLH PIPE &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt DQT SQT    &mt COLON HASH
    &mt LT PLUS &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O          &mt EXCL AT
-   &mt GT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt QMARK FSLH &kp UNDER
-             &kp LGUI &mo 2  &mt LSHFT BSPC    &mt TAB SPACE &mo 1 &kp LCTRL
+   &mt GT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt QMARK FSLH &mt EQUAL UNDER
+             &kp LGUI &mo 2  &kp BSPC    &mt TAB SPACE &mo 1 &kp LCTRL
                         >;
                 };
                 lower_layer {
