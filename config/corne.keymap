@@ -182,7 +182,7 @@ rpi: require_prior_idle {
         };
         tilder {
             timeout-ms = <100>;
-            key-positions = <37 38>;
+            key-positions = <36 37>;
             bindings = <&kp TILDE>;
             require-prior-idle-ms = <125>;
         };
@@ -264,7 +264,7 @@ rpi: require_prior_idle {
 //        };
         shifter {
             timeout-ms = <100>;
-            key-positions = <36 37>;
+            key-positions = <37 38>;
             bindings = <&sk LSHFT>;
             require-prior-idle-ms = <125>;
         };
@@ -420,9 +420,9 @@ rpi: require_prior_idle {
 //                    | GUI | LWR | SPC |     | ENT | RSE  | ALT |
                         label = "Base";
                         bindings = <
-   &mt BSLH PIPE &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt DQT SQT    &mt COLON HASH
+   &mt BSLH FLSH &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &mt DQT SQT    &mt COLON HASH
    &mt LT PLUS &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O          &mt EXCL AT
-   &mt GT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt QMARK FSLH &mt EQUAL UNDER
+   &mt GT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt PIPE QMARK &mt EQUAL UNDER
              &kp LGUI &mo 2  &kp BSPC    &mt TAB SPACE &mo 1 &kp LCTRL
                         >;
                 };
