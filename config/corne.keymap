@@ -436,7 +436,7 @@ rpi: require_prior_idle {
                         bindings = <
    &trans &kp FSLH  &kp BSLH  &kp COLON &kp SEMI  &kp PIPE       &kp PG_UP  &browser_back  &browser_for  &kp C_VOL_UP   &kp C_VOL_DN &kp K_NEXT
    &trans &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  &kp QMARK      &kp PG_DN  &kp LEFT      &kp UP        &kp DOWN   &kp RIGHT &kp K_PREV
-   &trans &kp LT    &kp GT    &kp EXCL  &kp HASH  &kp EQUAL      &kp F5  &kp HOME      &kp END       &browser_back     &browser_for &trans
+   &trans &kp LT    &kp GT    &kp EXCL  &kp HASH  &kp EQUAL      &kp F5  &kp HOME      &kp END       &speed_up    &speed_down    &trans
                      &kp LGUI   &kp LALT  &kp BSPC       &kp LCTRL     &kp K_PLAY_PAUSE  &kp RALT
                         >;
                 };
