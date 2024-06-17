@@ -255,18 +255,18 @@ rpi: require_prior_idle {
 //            bindings = <&to 5>;
 //            require-prior-idle-ms = <125>;
 //        };    
-        sw_col {
-            timeout-ms = <100>;
-            key-positions = <36 41>;
-            bindings = <&colemak>;
-            require-prior-idle-ms = <125>;
-        };
-        sc_esc {
-            timeout-ms = <100>;
-            key-positions = <13 14 15 16>;
-            bindings = <&mo 5>;
-            require-prior-idle-ms = <125>;
-        };
+//        sw_col {
+//            timeout-ms = <100>;
+//            key-positions = <36 41>;
+//            bindings = <&colemak>;
+//            require-prior-idle-ms = <125>;
+//        };
+//        sc_esc {
+//            timeout-ms = <100>;
+//            key-positions = <13 14 15 16>;
+//            bindings = <&mo 5>;
+//            require-prior-idle-ms = <125>;
+//        };
 //        sc_tab {
 //            timeout-ms = <100>;
 //            key-positions = <19 20 21>;
