@@ -334,7 +334,7 @@ rpi: require_prior_idle {
             label = "p_pass";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&kp P>, <&kp S>, <&kp I>, <&kp A>, <&kp C>, <&kp T>, <&kp I>, <&kp V> , <&kp E>, <&kp 1>, <&kp QMARK>, <&kp RET>;
+            bindings = <&sk LSHFT>, <&kp P>, <&kp S>, <&kp I>, <&kp A>, <&kp C>, <&kp T>, <&kp I>, <&kp V> , <&kp E>, <&kp N1>, <&kp QMARK>, <&kp RET>;
         };
         w_pass: w_pass {
             label = "\_pass";
