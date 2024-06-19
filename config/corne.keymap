@@ -279,12 +279,12 @@ rpi: require_prior_idle {
             bindings = <&sk LSHFT>;
             require-prior-idle-ms = <125>;
         };
-        alt_shifter {
+        mod_three {
             timeout-ms = <100>;
             key-positions = <37 40>;
-            bindings = <&sk LSHFT>;
+            bindings = <&mo 3>;
             require-prior-idle-ms = <125>;
-        };
+          };
     };
 
     macros {
