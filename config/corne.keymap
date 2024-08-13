@@ -239,14 +239,14 @@ rpi: require_prior_idle {
         };
         mv_base {
             timeout-ms = <100>;
-            key-positions = <25 34>;
+            key-positions = <7 8 9 10>;
             bindings = <&to 0>;
             require-prior-idle-ms = <125>;
         };
-        frost {
+        basic_gm {
             timeout-ms = <100>;
             key-positions = <0 11>;
-            bindings = <&to 5>;
+            bindings = <&to 8>;
             require-prior-idle-ms = <125>;
         };
 //        mv_maclayer {
@@ -539,6 +539,20 @@ rpi: require_prior_idle {
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp A &lb_corner   &rb_corner     &lefty   &righty &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp A &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp ESC
                   &kp SPACE &kp LSHFT &kp LCTRL   &kp F2 &kp RCTRL &kp RALT
+                        >;
+                };
+                basic_game {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        label = "Basic_Game";
+                        bindings = <
+   &trans   &trans &kp N1 &kp N2 &kp N3 &trans   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
+   &trans &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp ESC   &kp K_SCROLL_UP &mkp LCLK  &mkp RCLK     &mkp MCLK   &kp SEMI &kp SQT
+   &trans &trans &kp HOME &kp V &kp B &kp LALT   &kp K_SCROLL_DOWN &kp K_COPY  &kp K_PASTE &kp K_CUT &kp FSLH &kp ESC
+                  &trans &trans &kp SPACE   &to 0  &kp K_UNDO &kp K_REDO
                         >;
                 };
         };
