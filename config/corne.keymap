@@ -550,7 +550,7 @@ rpi: require_prior_idle {
                         label = "Basic_Game";
                         bindings = <
    &trans   &trans &kp N1 &kp N2 &kp N3 &trans   &kp Y &kp U  &kp I     &kp O   &to 0    &kp BSPC
-   &trans &kp LEFT &kp UP &kp DOWN &kp RIGHT &kp ESC   &kp K_SCROLL_UP &mkp LCLK  &mkp RCLK     &mkp MCLK   &kp SEMI &kp SQT
+   &trans &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp ESC   &kp K_SCROLL_UP &mkp LCLK  &mkp RCLK     &mkp MCLK   &kp SEMI &kp SQT
    &trans &trans &kp HOME &kp V &kp B &kp LALT   &kp K_SCROLL_DOWN &kp K_COPY  &kp K_PASTE &kp K_CUT &kp FSLH &kp ESC
                   &trans &trans &kp SPACE   &to 0  &kp K_UNDO &kp K_REDO
                         >;
