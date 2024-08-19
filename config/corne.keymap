@@ -149,7 +149,7 @@ rpi: require_prior_idle {
         btclall {
             timeout-ms = <100>;
             key-positions = <1 11>;
-            bindings = <&bt BT_CLR_ALL>;
+            bindings = <&bt BT_CLR>;
             require-prior-idle-ms = <125>;
         };
 
@@ -466,7 +466,7 @@ rpi: require_prior_idle {
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         label = "Raise";
                         bindings = <
-   &trans &kp DLLR    &bt BT_CLR_ALL     &kp RBRC    &kp RBRC     &kp PRCNT           &kp CARET &kp N1 &kp N2 &kp N3 &kp PLUS  &trans
+   &trans &kp DLLR    &bt BT_CLR     &kp RBRC    &kp RBRC     &kp PRCNT           &kp CARET &kp N1 &kp N2 &kp N3 &kp PLUS  &trans
    &trans &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &p_pass        &kp LCLK &kp N4 &kp N5 &kp N6 &kp MINUS &trans
    &trans &kp AT  &kp AMPS  &kp DEL  &kp LSHFT  &w_pass                       &kp RCLK &kp N7 &kp N8 &kp N9 &kp N0    &trans
                     	     &kp LGUI &trans   &kp BSPC                 &kp UNDER   &kp MINUS    &kp RALT
