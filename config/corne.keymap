@@ -142,10 +142,17 @@ rpi: require_prior_idle {
         };
         btclr {
             timeout-ms = <100>;
+            key-positions = <1 11>;
+            bindings = <&bt BT_CLR>;
+            require-prior-idle-ms = <125>;
+        };        
+        btclr {
+            timeout-ms = <100>;
             key-positions = <1 18>;
             bindings = <&bt BT_CLR>;
             require-prior-idle-ms = <125>;
         };
+
         escapades {
             timeout-ms = <100>;
             key-positions = <17 18>;
