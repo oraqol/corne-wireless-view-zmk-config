@@ -113,43 +113,43 @@ rpi: require_prior_idle {
         };
         bt1 {
             timeout-ms = <100>;
-            key-positions = <0 1 2 3 6>;
+            key-positions = <0 1 6>;
             bindings = <&bt BT_SEL 0>;
             require-prior-idle-ms = <125>;
         };
         bt2 {
             timeout-ms = <100>;
-            key-positions = <0 1 2 3 7>;
+            key-positions = <0 1 7>;
             bindings = <&bt BT_SEL 1>;
             require-prior-idle-ms = <125>;
         };
         bt3 {
             timeout-ms = <100>;
-            key-positions = <0 1 2 3 8>;
+            key-positions = <0 1 8>;
             bindings = <&bt BT_SEL 2>;
             require-prior-idle-ms = <125>;
         };
         bt4 {
             timeout-ms = <100>;
-            key-positions = <0 1 2 3 9>;
+            key-positions = <0 1 9>;
             bindings = <&bt BT_SEL 3>;
             require-prior-idle-ms = <125>;
         };
         bt5 {
             timeout-ms = <100>;
-            key-positions = <0 1 2 3 10>;
+            key-positions = <0 1 10>;
             bindings = <&bt BT_SEL 4>;
             require-prior-idle-ms = <125>;
         };
         btclr {
             timeout-ms = <100>;
-            key-positions = <0 1 2 3 11>;
+            key-positions = <0 1 11>;
             bindings = <&bt BT_CLR>;
             require-prior-idle-ms = <125>;
         };        
         btclall {
             timeout-ms = <100>;
-            key-positions = <0 1 2 3 18>;
+            key-positions = <0 1 18>;
             bindings = <&bt BT_CLR>;
             require-prior-idle-ms = <125>;
         };
